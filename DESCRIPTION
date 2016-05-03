@@ -21,3 +21,4 @@ BugReports: http://github.com/jcheng5/googleCharts/issues
 Collate:
     'datatable.R'
     'outputs.R'
+RoxygenNote: 5.0.1

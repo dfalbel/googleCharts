@@ -1,3 +1,4 @@
+#' @importFrom RJSONIO toJSON
 setMethod("toJSON", "Date",
           function(x, container =  isContainer(x, asIs, .level),
                    collapse = "\n", ..., .level = 1L,
@@ -31,7 +32,8 @@ chartlibs = list(
   table = 'table',
   timeline = 'timeline',
   treemap = 'treemap',
-  sankey = 'sankey'
+  sankey = 'sankey',
+  wordtree = 'wordtree'
 )
 
 #' Initialize Google Charts
@@ -69,7 +71,9 @@ googleChartsInit <- function(chartTypes = c('ALL',
   'steppedarea',
   'table',
   'timeline',
-  'treemap')) {
+  'treemap',
+  'wordtree'
+  )) {
 
   addResourcePath('googleCharts', system.file('www', package='googleCharts'))
 
@@ -294,4 +298,10 @@ googleHistogram <- function(id, width, height, options = list(), ...) {
 #' @export
 googleTimeline <- function(id, width, height, options = list(), ...) {
   googleOutput(id, 'timeline', width, height, options, ...)
+}
+
+#' @rdname googleChart
+#' @export
+googleWordtree <- function(id, width, height, options = list(), ...) {
+  googleOutput(id, 'wordtree', width, height, options, ...)
 }

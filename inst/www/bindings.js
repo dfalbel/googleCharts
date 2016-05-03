@@ -160,7 +160,8 @@ var chartTypes = [
   ['table', 'Table', 'table'],
   ['timeline', 'Timeline', 'timeline'],
   ['treemap', 'TreeMap', 'treemap'],
-  ['sankey', 'Sankey', 'sankey']
+  ['sankey', 'Sankey', 'sankey'],
+  ['wordtree', 'WordTree', 'wordtree']
 ];
 
 for (var i = 0; i < chartTypes.length; i++) {
